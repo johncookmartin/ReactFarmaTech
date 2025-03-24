@@ -16,39 +16,53 @@ const HomePage = () => {
       </section>
       <section className="content-container">
         <article className="content-block">
+          <div className="company-info">
+            <p>
+              Farma Tech International supports the efforts of both private
+              farmers and international agencies in monitoring and control of
+              pests of economic importance. For over a decade Farma Tech has
+              provided state of the art semio-chemicals and proprietary
+              controlled release products to attract and capture fruit flies and
+              other pests.
+            </p>
+          </div>
+        </article>
+        <article className="content-block forest-green">
           <img src={threeFliesPhoto} alt="three bactrocera flies" />
           <div>
             <h2>About Us</h2>
-            <p>
-              Welcome to Farma Tech International, where we are dedicated to
-              supporting the efforts of private farmers and international
-              agencies in the monitoring and control of pests of economic
-              importance. For over a decade, we have provided state-of-the-art
-              semio-chemicals and proprietary controlled release products to
-              attract and capture fruit flies and other pests.{' '}
-            </p>
-            <p>
-              Our company was founded on the principle that pest control can be
-              achieved using innovative and environmentally responsible
-              solutions. We believe in the power of science and technology to
-              create products that are effective, safe, and sustainable.
-            </p>
-            <p>
-              {' '}
-              At Farma Tech, we work closely with farmers and other stakeholders
-              to understand their pest control needs and develop solutions that
-              meet those needs. Our team of experts is constantly researching
-              and testing new technologies to improve our products and stay at
-              the forefront of the industry.
-            </p>
-            <p>
-              {' '}
-              We are proud of the impact that our products have had on the lives
-              and livelihoods of farmers around the world. Our mission is to
-              continue to innovate and collaborate with our partners to create a
-              world where pests are no longer a threat to agriculture and food
-              security.
-            </p>
+            <h3>Mission</h3>
+            <div>
+              <p>
+                Farma Tech International seeks to provide superior products and
+                services to support international agencies, as well as the
+                private sector, in developing and implementing the most
+                effective, economical, and sustainable Integrated Pest
+                Management (IPM) systems and programs possible.
+              </p>
+            </div>
+            <h3>Company Profile</h3>
+            <div>
+              <p>
+                Farma Tech International, incorporated in 1992, provides state
+                of the art semio-chemicals and proprietary Controlled Release
+                products, mainly to international agencies in support of their
+                efforts to monitor and control pests of economic importance. In
+                cooperation with the United States Department of Agriculture
+                (USDA) it has developed and tested new and unique pest
+                monitoring and control products including the C&C Trap for which
+                Farma Tech International and the USDA share a patent. Farma Tech
+                International enjoys strong ties to research organizations
+                including the Agriculture Research Services (ARS) branch of the
+                USDA and currently has proven Controlled Release products for
+                Mediterranean Fruit Fly and Gypsy Moth. Other cooperative
+                projects have included working closely with the USDA Animal and
+                Plant Health Inspection Service (USDA/APHIS), the USDA Forest
+                Service (USDA/FS), the California Department of Food and
+                Agriculture (CDFA), and the Inter-American Institute for
+                Cooperation on Agriculture (IICA).
+              </p>
+            </div>
           </div>
         </article>
       </section>
