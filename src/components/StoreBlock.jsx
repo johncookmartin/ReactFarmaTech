@@ -5,9 +5,9 @@ const StoreBlock = ({ productColor, productName }) => {
   const styles = { backgroundColor: productColor };
 
   return (
-    <article class="store-block">
+    <article className="store-block">
       <img src={logo} alt="Farma Tech Logo" />
-      <div style={styles} class="store-block-color"></div>
+      <div style={styles} className="store-block-color"></div>
       <h3>{productName}</h3>
       <button></button>
     </article>
