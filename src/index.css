@@ -109,7 +109,7 @@ article.store-block img {
 
 article.store-block h3 {
   color: #ffffff;
-  font-size: 2.5em;
+  font-size: 2em;
   text-transform: uppercase;
 }
 
@@ -153,18 +153,14 @@ article.content-block {
   padding-block: 10px;
   display: flex;
   justify-content: center;
-}
-
-div.company-info {
-  width: 100%;
-  font-size: 1.5em;
   text-align: center;
 }
 
-article.content-block img {
+img.company-info-photo {
   object-fit: cover;
   width: 50%;
   margin-right: 20px;
+  border-radius: 2%;
 }
 
 article.content-block h2 {
@@ -175,9 +171,12 @@ article.content-block h2 {
   text-align: center;
 }
 
-article.content-block h3 {
+.company-info-link {
   margin-left: 50px;
-  font-size: 1.5em;
+  font-size: 1.75em;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 article.content-block p {
@@ -188,3 +187,43 @@ article.content-block.forest-green {
   background-color: rgb(95, 137, 95);
   padding-inline: 2%;
 }
+
+div.company-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quick-links-container {
+  display: flex;
+  justify-content: center;
+}
+
+.quick-link {
+  height: 100%;
+  width: 40%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.quick-link-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.quick-link-caption {
+  position: absolute;
+  margin-top: 160px;
+  color: white;
+  font-size: 1.25em;
+  background-color: #808080;
+  padding-inline: 10px;
+  opacity: 0.80;
+  
+}
+

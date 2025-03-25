@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Carousel from '../components/Carousel';
 import { carouselArr } from '../assets/carouselArray';
 import StoreBlock from '../components/StoreBlock';
 import threeFliesPhoto from '../assets/flies/Bactrocera_invadens_(06410591)_(6922919407).jfif';
+import productPhoto from '../assets/products/stock/FT 12.jpg';
+import resourcePhoto from '../assets/products/DSC00729.jpg';
 
 const HomePage = () => {
   return (
@@ -16,14 +19,16 @@ const HomePage = () => {
       </section>
       <section className="content-container">
         <article className="content-block">
-          <h2 className="company-banner">
-            Monitoring & Control of Pests of Economic Importance
-          </h2>
+          <h2>Monitoring & Control of Pests of Economic Importance</h2>
         </article>
         <article className="content-block forest-green">
-          <img src={threeFliesPhoto} alt="three bactrocera flies" />
-          <div>
-            <h3>Company Info</h3>
+          <img
+            className="company-info-photo"
+            src={threeFliesPhoto}
+            alt="three bactrocera flies"
+          />
+          <div className="company-info">
+            <Link className="company-info-link">Company Info</Link>
             <div>
               <p>
                 Farma Tech International supports the efforts of both private
@@ -33,6 +38,16 @@ const HomePage = () => {
                 controlled release products to attract and capture fruit flies
                 and other pests.
               </p>
+            </div>
+            <div className="quick-links-container">
+              <Link className="quick-link">
+                <img className="quick-link-image" src={productPhoto} />
+                <h4 className="quick-link-caption">Products</h4>
+              </Link>
+              <Link className="quick-link">
+                <img className="quick-link-image" src={resourcePhoto} />
+                <h4 className="quick-link-caption">Resources</h4>
+              </Link>
             </div>
           </div>
         </article>
