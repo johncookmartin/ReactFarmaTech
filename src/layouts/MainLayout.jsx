@@ -1,16 +1,12 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 import ContactUsFooter from '../components/ContactUsFooter';
-import farmaTechLogo from '../assets/logos/cropped-cropped-Logo-See-Thru-1.png';
 
 const MainLayout = () => {
   return (
     <>
-      <header>
-        <Link to="/">
-          <img src={farmaTechLogo} alt="Farma Tech Logo" />
-        </Link>
-      </header>
+      <Navbar />
       <main>
         <Outlet />
       </main>

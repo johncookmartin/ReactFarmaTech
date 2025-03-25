@@ -175,7 +175,7 @@ img.company-info-photo {
   margin-left: 50px;
   font-size: 1.75em;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -187,6 +187,7 @@ article.content-block.forest-green {
   background-color: rgb(95, 137, 95);
   padding-inline: 2%;
   margin-bottom: 0px;
+  color: white;
 }
 
 div.company-info {
@@ -306,6 +307,82 @@ div.company-info {
 .not-found-link:hover {
   background-color: #8a946f;
   color: white;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.about-block {
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem 12.5%;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.about-block h2 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-block p {
+  font-size: 1.25em;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-block.forest-green {
+  background-color: rgb(95, 137, 95);
+  color: white;
+  border-radius: 4px;
+}
+
+.navbar {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: relative;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d9ffd9;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 

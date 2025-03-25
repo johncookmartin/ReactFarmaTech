@@ -19,9 +19,9 @@ const ContactUsFooter = () => {
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.1539337445174!2d-121.79817052310162!3d47.50677707118081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54907c1b22994ba5%3A0xcf9d7c6fa613aa51!2sFarma-Tech%20Int!5e0!3m2!1sen!2sca!4v1742904760164!5m2!1sen!2sca"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
