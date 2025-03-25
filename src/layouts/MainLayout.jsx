@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import ContactUsFooter from '../components/ContactUsFooter';
 import farmaTechLogo from '../assets/logos/cropped-cropped-Logo-See-Thru-1.png';
 
 const MainLayout = () => {
@@ -13,6 +14,7 @@ const MainLayout = () => {
       <main>
         <Outlet />
       </main>
+      <ContactUsFooter />
     </>
   );
 };

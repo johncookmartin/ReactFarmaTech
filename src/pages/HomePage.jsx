@@ -28,7 +28,9 @@ const HomePage = () => {
             alt="three bactrocera flies"
           />
           <div className="company-info">
-            <Link className="company-info-link">Company Info</Link>
+            <Link to="/about" className="company-info-link">
+              Company Info
+            </Link>
             <div>
               <p>
                 Farma Tech International supports the efforts of both private
@@ -40,11 +42,11 @@ const HomePage = () => {
               </p>
             </div>
             <div className="quick-links-container">
-              <Link className="quick-link">
+              <Link to="/store" className="quick-link">
                 <img className="quick-link-image" src={productPhoto} />
                 <h4 className="quick-link-caption">Products</h4>
               </Link>
-              <Link className="quick-link">
+              <Link to="/resources" className="quick-link">
                 <img className="quick-link-image" src={resourcePhoto} />
                 <h4 className="quick-link-caption">Resources</h4>
               </Link>
