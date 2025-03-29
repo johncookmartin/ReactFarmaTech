@@ -55,7 +55,11 @@ section.content-container {
    color: white;
    font-weight: bold;
  }
- 
+
+ .company-info-link:hover {
+  color: #d9ffd9;
+ }
+
  article.content-block p {
    font-size: 1.25em;
  }
@@ -96,12 +100,30 @@ section.content-container {
  }
  
  .quick-link-caption {
-   position: absolute;
-   margin-top: 160px;
-   color: white;
-   font-size: 1.25em;
-   background-color: #808080;
-   padding-inline: 10px;
-   opacity: 0.80;
-   
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  position: relative;
+  padding: 0.5rem;
+  transition: color 0.3s ease;   
  }
+
+ .quick-link-caption:hover {
+  color: #d9ffd9;
+}
+
+.quick-link-caption::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.quick-link-caption:hover::after {
+  width: 100%;
+}

@@ -43,14 +43,14 @@ const HomePage = () => {
               </p>
             </div>
             <div className="quick-links-container">
-              <Link to="/store" className="quick-link">
+              <div to="/store" className="quick-link">
                 <img className="quick-link-image" src={productPhoto} />
-                <h4 className="quick-link-caption">Products</h4>
-              </Link>
-              <Link to="/resources" className="quick-link">
+                <Link className="quick-link-caption">Products</Link>
+              </div>
+              <div to="/resources" className="quick-link">
                 <img className="quick-link-image" src={resourcePhoto} />
-                <h4 className="quick-link-caption">Resources</h4>
-              </Link>
+                <Link className="quick-link-caption">Resources</Link>
+              </div>
             </div>
           </div>
         </article>
