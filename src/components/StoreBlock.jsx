@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/logos/FarmaTechGreyLogo.png';
+import './styles/storeblock.css';
 
 const StoreBlock = ({ productColor, productName }) => {
   const styles = { backgroundColor: productColor };

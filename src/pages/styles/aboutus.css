@@ -1,0 +1,33 @@
+.about-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-block: 2rem;
+ }
+ 
+ .about-block {
+   max-width: 1200px;
+   width: 100%;
+   padding: 1rem 12.5%;
+   margin-bottom: 2rem;
+   text-align: left;
+ }
+ 
+ .about-block h2 {
+   font-size: 2.5em;
+   margin-bottom: 1rem;
+   font-weight: bold;
+   text-align: center;
+ }
+ 
+ .about-block p {
+   font-size: 1.25em;
+   margin-bottom: 1rem;
+   line-height: 1.6;
+ }
+ 
+ .about-block.forest-green {
+   background-color: rgb(95, 137, 95);
+   color: white;
+   border-radius: 4px;
+ }

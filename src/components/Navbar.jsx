@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import farmaTechLogo from '../assets/logos/cropped-cropped-Logo-See-Thru-1.png';
+import './styles/navbar.css';
 
 const Navbar = () => {
   return (

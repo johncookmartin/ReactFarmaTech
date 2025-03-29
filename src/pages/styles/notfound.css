@@ -1,0 +1,44 @@
+.not-found-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: calc(70vh - 90px);
+   text-align: center;
+   padding: 2rem;
+   background-color: #f1f1f1;
+ }
+ 
+ .not-found-title {
+   font-size: 8rem;
+   color: #5f895f; /* Matches your forest green */
+   margin: 0;
+ }
+ 
+ .not-found-subtitle {
+   font-size: 2rem;
+   color: #333;
+   margin: 10px 0;
+ }
+ 
+ .not-found-message {
+   font-size: 1.25rem;
+   margin: 20px 0;
+   color: #555;
+ }
+ 
+ .not-found-link {
+   font-size: 1.25rem;
+   font-weight: bold;
+   color: #000;
+   background-color: #A6A6A6;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 4px;
+   transition: background-color 0.3s ease-in-out;
+ }
+ 
+ .not-found-link:hover {
+   background-color: #8a946f;
+   color: white;
+ }

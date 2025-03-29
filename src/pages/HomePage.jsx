@@ -6,6 +6,7 @@ import StoreBlock from '../components/StoreBlock';
 import threeFliesPhoto from '../assets/flies/Bactrocera_invadens_(06410591)_(6922919407).jfif';
 import productPhoto from '../assets/products/stock/FT 12.jpg';
 import resourcePhoto from '../assets/products/DSC00729.jpg';
+import './styles/homepage.css';
 
 const HomePage = () => {
   return (

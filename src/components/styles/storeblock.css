@@ -1,0 +1,46 @@
+article.store-block {
+   height: 200px;
+   top: -25px;
+   width: 420px;
+   margin-inline: 5px;
+   position: relative;
+   box-shadow: 5px 5px 5px -1px #00000080;
+   text-align: center;
+   background-color: #000000;
+   
+ }
+ 
+ article.store-block img {
+   height: 100%;
+   position: absolute;
+   left: 0;
+ }
+ 
+ article.store-block h3 {
+   color: #ffffff;
+   font-size: 2em;
+   text-transform: uppercase;
+ }
+ 
+ div.store-block-color {
+   filter: grayscale(50%);
+   height: 30px;
+   width: 100%;
+   opacity: 0.75;
+ }
+ 
+ article.store-block button {
+   height: 40%;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background-color: #A6A6A6;
+   transition: background-color 0.3s ease-in-out;
+   Border: none;
+   color:#000000;
+   font-size: 1em;
+   font-weight: bold;
+   text-transform: uppercase;
+   opacity: 0.75;
+ }

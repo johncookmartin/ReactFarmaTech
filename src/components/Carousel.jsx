@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import './styles/carousel.css';
 
 const Carousel = ({ imageArr }) => {
   const [imageIndex, setImageIndex] = useState(1);
