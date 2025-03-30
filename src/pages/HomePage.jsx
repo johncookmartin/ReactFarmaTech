@@ -5,7 +5,7 @@ import { carouselArr } from '../assets/carouselArray';
 import StoreBlock from '../components/StoreBlock';
 import threeFliesPhoto from '../assets/flies/Bactrocera_invadens_(06410591)_(6922919407).jfif';
 import productPhoto from '../assets/products/stock/FT 12.jpg';
-import resourcePhoto from '../assets/products/DSC00729.jpg';
+import contactPhoto from '../assets/products/DSC00729.jpg';
 import './styles/homepage.css';
 
 const HomePage = () => {
@@ -43,13 +43,17 @@ const HomePage = () => {
               </p>
             </div>
             <div className="quick-links-container">
-              <div to="/store" className="quick-link">
+              <div className="quick-link">
                 <img className="quick-link-image" src={productPhoto} />
-                <Link className="quick-link-caption">Products</Link>
+                <Link to="/products" className="quick-link-caption">
+                  Products
+                </Link>
               </div>
-              <div to="/resources" className="quick-link">
-                <img className="quick-link-image" src={resourcePhoto} />
-                <Link className="quick-link-caption">Resources</Link>
+              <div className="quick-link">
+                <img className="quick-link-image" src={contactPhoto} />
+                <Link to="/contact" className="quick-link-caption">
+                  Contact
+                </Link>
               </div>
             </div>
           </div>
