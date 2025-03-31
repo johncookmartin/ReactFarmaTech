@@ -13,7 +13,9 @@ const ContactUsFooter = () => {
           <p>1546 Boalch Ave NW #30</p>
           <p>North Bend, WA</p>
           <p>Phone: (425) 396-1050</p>
-          <p>Email: </p>
+          <p>Fax: (425) 396-1059</p>
+          <p>Email Info: info@farmatech.com</p>
+          <p>Email Sales: sales@farmatech.com</p>
           <p>Hours: Mon–Fri, 9am–5pm</p>
         </div>
 
