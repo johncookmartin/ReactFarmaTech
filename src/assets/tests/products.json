@@ -1,0 +1,161 @@
+[
+   {
+     "name": "FT Cuelure",
+     "formulations": [
+       {
+         "type": "liquid",
+         "purity": ">98%",
+         "chemical_name": "4-[4-(acetyloxy)phenyl]-2-butanone",
+         "physical_state": "Liquid",
+         "packaging_options": ["1KG", "5KG", "10KG", "20KG"]
+       },
+       {
+         "type": "solid",
+         "subtype": "wafer/lure/strip",
+         "sizes": ["1x2x1/8", "2x2x1/8", "2x3x1/8"],
+         "weights": ["4g", "6g", "10g"],
+         "packaging": ["12", "9", "6"],
+         "notes": "Can be individually packaged upon request"
+       }
+     ],
+     "target_pests": [
+       "Melon Fly (Bactrocera cucurbitae)",
+       "Queensland Fly (Bactrocera tryoni)",
+       "Lesser Queensland Fly (Bactrocera neohumeralis)",
+       "Mango Fly (Bactrocera frauenfeldi)",
+       "Fijian Fruit Fly (Bactrocera passiflorae)",
+       "And more..."
+     ],
+     "special_instructions": "Store at room temperature. Not registered for control. No killing agent."
+   },
+   {
+     "name": "FT Terpinyl Acetate",
+     "formulations": [
+       {
+         "type": "solid",
+         "subtype": "wafer/lure/strip",
+         "sizes": ["1x2x1/8", "2x2x1/8", "2x3x1/8"],
+         "weights": ["2g", "4g", "6g"],
+         "packaging": ["12", "9", "6"]
+       }
+     ],
+     "target_pests": [
+       "Natal Fruit Fly (Ceratitis rosa)",
+       "Mango Fruit Fly (Ceratitis cosyra)",
+       "Mediterranean Fruit Fly (Ceratitis capitata)",
+       "And more..."
+     ],
+     "special_instructions": "Store at room temperature. Not registered for control. No killing agent."
+   },
+   {
+     "name": "FT Zingerone",
+     "formulations": [
+       {
+         "type": "solid",
+         "subtype": "strip",
+         "sizes": ["1x2x1/8"],
+         "weights": ["1.5g"],
+         "packaging": ["12"]
+       }
+     ],
+     "target_pests": ["Bactrocera jarvisi", "Bactrocera aglaiae"],
+     "special_instructions": "Store at room temperature. Not registered for control. No killing agent."
+   },
+   {
+     "name": "FT Methyl Eugenol",
+     "formulations": [
+       {
+         "type": "liquid",
+         "purity": ">98%",
+         "chemical_name": "1,2-dimethoxy-4-(2-propenyl)benzene",
+         "physical_state": "Liquid",
+         "packaging_options": ["1KG", "5KG", "10KG", "20KG"]
+       },
+       {
+         "type": "solid",
+         "subtype": "wafer/lure/strip",
+         "sizes": ["1x2x1/8", "2x2x1/8", "2x3x1/8"],
+         "weights": ["2g", "4g", "6g"],
+         "packaging": ["12", "9", "6"]
+       }
+     ],
+     "target_pests": [
+       "Oriental Fruit Fly (Bactrocera dorsalis)",
+       "Peach Fruit Fly (Bactrocera zonata)",
+       "Carambola Fruit Fly (Bactrocera carambolae)",
+       "Guava Fruit Fly (Bactrocera correcta)",
+       "Mango Fruit Fly (Bactrocera invadens)",
+       "And more..."
+     ],
+     "special_instructions": "Store at room temperature. Not registered for control. No killing agent."
+   },
+   {
+     "name": "FT MR Lure",
+     "formulations": [
+       {
+         "type": "solid",
+         "subtype": "wafer",
+         "sizes": ["2x3x1/8"],
+         "contents": [
+           "6g Methyl Eugenol",
+           "2.3g Raspberry Ketone"
+         ],
+         "packaging": ["6"]
+       }
+     ],
+     "special_instructions": "Store at room temperature. Not registered for control. No killing agent."
+   },
+   {
+     "name": "FT TMR Lure",
+     "formulations": [
+       {
+         "type": "solid",
+         "subtype": "wafer",
+         "sizes": ["2x3x1/8"],
+         "contents": [
+           "5.5g Methyl Eugenol",
+           "2.2g Raspberry Ketone",
+           "3.5g Trimedlure"
+         ],
+         "packaging": ["6"]
+       }
+     ],
+     "special_instructions": "Store at room temperature. Not registered for control. No killing agent."
+   },
+   {
+     "name": "FT Trimedlure",
+     "formulations": [
+       {
+         "type": "liquid",
+         "purity": ">95%",
+         "specs": {
+           "CTA Acid": "<0.5%",
+           "Siglure Acid": "<0.2%",
+           "Trans C Isomer": "38%-45%",
+           "Trans B2 Isomer": "<24%",
+           "Total CIS Isomer": "<10%"
+         },
+         "packaging_options": ["1KG", "5KG", "10KG", "20KG"]
+       },
+       {
+         "type": "solid",
+         "subtype": "plug",
+         "weights": ["2g", "3g"],
+         "packaging": ["Tray of 32", "Carton of 1000"]
+       },
+       {
+         "type": "solid",
+         "subtype": "wafer/lure/panel",
+         "sizes": ["2x2x1/8", "2x3x1/8", "3x6x1/8"],
+         "weights": ["4g", "6g", "10g"],
+         "packaging": ["9", "6", "1"]
+       }
+     ],
+     "target_pests": [
+       "Mediterranean Fruit Fly (Ceratitis capitata)",
+       "Natal Fruit Fly (Ceratitis rosa)"
+     ],
+     "special_instructions": "Store at room temperature. Not registered for control. No killing agent. If crystalized, heat to melt."
+   }
+ ]
+ 
