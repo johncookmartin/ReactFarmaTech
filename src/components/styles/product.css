@@ -1,0 +1,93 @@
+/* Whole Product Card */
+.product-container {
+   border: 1px solid #e0e0e0;
+   border-radius: 10px;
+   padding: 2rem;
+   background-color: #fafafa;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+   transition: transform 0.2s ease;
+ }
+ 
+ .product-container:hover {
+   transform: translateY(-5px);
+ }
+ 
+ /* Product Header */
+ .product-container-header {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 2rem;
+ }
+ 
+ .product-container-header img {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   border-radius: 10px;
+   border: 1px solid #ddd;
+ }
+ 
+ .product-name {
+   font-size: 1.75rem;
+   color: #2e7d32;
+   margin: 0;
+ }
+ 
+ /* Product Body */
+ .product-container-body {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+ }
+ 
+ /* Sections inside Product Body */
+ .product-formulations,
+ .product-target-pests,
+ .product-special-instructions {
+   background-color: #f9f9f9;
+   padding: 1rem;
+   border-radius: 6px;
+   border: 1px solid #e0e0e0;
+ }
+ 
+ /* Special Instructions Section */
+ .product-special-instructions p {
+   margin: 0;
+   font-style: italic;
+ }
+ 
+ /* Tables */
+ .product-specs-table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 1rem;
+ }
+ 
+ .product-specs-table td, 
+ .product-specs-table th {
+   border: 1px solid #ddd;
+   padding: 0.75rem;
+   text-align: left;
+   vertical-align: top;
+ }
+ 
+ .product-specs-table th {
+   background-color: #f0f8f5;
+   font-weight: bold;
+ }
+ 
+ .product-specs-table tr:nth-child(even) {
+   background-color: #fdfdfd;
+ }
+ 
+ /* Nested table inside a cell */
+ .product-specs-table table {
+   width: 100%;
+   margin-top: 0.5rem;
+ }
+ 
+ .product-specs-table table td {
+   padding: 0.5rem;
+ }
+ 
