@@ -38,7 +38,7 @@ const Products = () => {
       <div className="products-search">
         <input
           type="text"
-          placeholder="Search by specifications..."
+          placeholder="Search..."
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
