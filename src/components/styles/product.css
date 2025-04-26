@@ -29,10 +29,15 @@
  }
  
  .product-name {
-   font-size: 1.75rem;
-   color: #2e7d32;
-   margin: 0;
- }
+  font-size: 1.75rem;
+  color: #2e7d32;
+  margin: 0;
+  cursor: pointer;
+}
+
+.product-name:hover {
+  color: #1b5e20; /* darker green on hover */
+}
  
  /* Product Body */
  .product-container-body {
