@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ProductTable from './ProductTable';
 import { nanoid } from 'nanoid';
-import productImage from '../assets/products/stock/FT 12.jpg';
+import productImage from '../assets/products/ft_trimedlure_all.jpg';
 import './styles/product.css';
 
 const Product = ({ data }) => {
