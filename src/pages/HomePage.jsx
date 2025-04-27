@@ -4,7 +4,7 @@ import Carousel from '../components/Carousel';
 import { carouselArr } from '../assets/carouselArray';
 import StoreBlock from '../components/StoreBlock';
 import threeFliesPhoto from '../assets/flies/Bactrocera_invadens_(06410591)_(6922919407).jfif';
-import productPhoto from '../assets/products/stock/FT 12.jpg';
+import productPhoto from '../assets/products/stock/liquid/tml/ft_trimedlure_all.jpg';
 import contactPhoto from '../assets/products/DSC00729.jpg';
 import './styles/homepage.css';
 
