@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import ProductTable from './ProductTable';
 import { nanoid } from 'nanoid';
-import stockPhoto from '../assets/products/ft_trimedlure_all.jpg';
 import './styles/product.css';
 
 const Product = ({ data }) => {
@@ -20,7 +19,13 @@ const Product = ({ data }) => {
   return (
     <article className="product-container">
       <div className="product-container-header">
-        <img src={stockPhoto} />
+        <img
+          src={
+            data.photo
+              ? `https://farmatechdata.blob.core.windows.net/products/photos${data.photo}`
+              : null
+          }
+        />
         <h3 className="product-name" onClick={toggleExpand}>
           {data.name}
         </h3>
