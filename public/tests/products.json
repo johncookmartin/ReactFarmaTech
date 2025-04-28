@@ -11,7 +11,7 @@
          "chemical_name": "4-[4-(acetyloxy)phenyl]-2-butanone",
          "physical_state": "Liquid",
          "packaging_options": ["1KG", "5KG", "10KG", "20KG"],
-         "sds" : "https://farmatechdata.blob.core.windows.net/products/sds/SDS FT-Cuelure.pdf"
+         "sds" : "SDS FT-Cuelure.pdf"
        },
        {
          "definition": "Solid Cuelure (Strip/Wafer/Lure) measuring (1”x2”x1/8”,2”x2”x1/8”, 2”x3”x1/8”)  used for the monitoring of fruit flies. FT-Cuelure (Wafer/Lure/) contain (4/6/10) grams of Cuelure with a controlled release rate allowing for long term monitoring. FT-Cuelure (Strip/Wafer/Lure) fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body",
@@ -21,7 +21,7 @@
          "weights": ["4g", "6g", "10g"],
          "packaging": ["12", "9", "6"],
          "notes": "Can be individually packaged upon request",
-         "sds" : "https://farmatechdata.blob.core.windows.net/products/sds/SDS FT-CL Lure.pdf"
+         "sds" : "SDS FT-CL Lure.pdf"
        }
      ],
      "target_pests": [
@@ -46,7 +46,7 @@
          "sizes": ["1x2x1/8", "2x2x1/8", "2x3x1/8"],
          "weights": ["2g", "4g", "6g"],
          "packaging": ["12", "9", "6"],
-         "sds": "https://farmatechdata.blob.core.windows.net/products/sds/SDS FT-TA Lure.pdf"
+         "sds": "SDS FT-TA Lure.pdf"
        }
      ],
      "target_pests": [
@@ -85,7 +85,8 @@
          "purity": ">98%",
          "chemical_name": "1,2-dimethoxy-4-(2-propenyl)benzene",
          "physical_state": "Liquid",
-         "packaging_options": ["1KG", "5KG", "10KG", "20KG"]
+         "packaging_options": ["1KG", "5KG", "10KG", "20KG"],
+         "sds": "SDS FT-Methyl Eugenol.pdf"
        },
        {
          "definition": "Solid ME (Strip/Wafer/Lure) measuring (1”x2”x1/8”,2”x2”x1/8”, 2”x3”x1/8”)  used for the monitoring of fruit flies. FT- ME (Wafer/Lure/) contain (2/4/6) grams of ME with a controlled release rate allowing for long term monitoring. FT- ME (Strip/Wafer/Lure) fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body.",
@@ -93,7 +94,8 @@
          "subtype": "wafer/lure/strip",
          "sizes": ["1x2x1/8", "2x2x1/8", "2x3x1/8"],
          "weights": ["2g", "4g", "6g"],
-         "packaging": ["12", "9", "6"]
+         "packaging": ["12", "9", "6"],
+         "sds": "SDS FT-ME Lure.pdf"
        }
      ],
      "target_pests": [
@@ -161,14 +163,16 @@
            "Trans B2 Isomer": "<24%",
            "Total CIS Isomer": "<10%"
          },
-         "packaging_options": ["1KG", "5KG", "10KG", "20KG"]
+         "packaging_options": ["1KG", "5KG", "10KG", "20KG"],
+         "sds": "SDS FT-Trimedlure.pdf"
        },
        {
          "definition": "Solid Trimedlure Plug used for the monitoring of fruit flies. FT-TML Plugs contain (2/3) grams of Trimedlure with a controlled release rate allowing for long term monitoring. FT-TML Plugs fit within the standard plastic baskets used by the USDA in Jackson Traps.",
          "type": "solid",
          "subtype": "plug",
          "weights": ["2g", "3g"],
-         "packaging": ["Tray of 32", "Carton of 1000"]
+         "packaging": ["Tray of 32", "Carton of 1000"],
+         "sds": "SDS FT-TML Plug.pdf"
        },
        {
          "definition": "Solid Trimedlure (Wafer/Lure/Panel) measuring (2”x2”x1/8”, 2”x3”x1/8”, 3”x6”x1/8”)  used for the monitoring of fruit flies. FT-TML (Wafer/Lure/Panel) contain (4/6/10) grams of Trimedlure with a controlled release rate allowing for long term monitoring. FT-TML (Wafer/Lure/Panel) fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body.",
@@ -176,7 +180,8 @@
          "subtype": "wafer/lure/panel",
          "sizes": ["2x2x1/8", "2x3x1/8", "3x6x1/8"],
          "weights": ["4g", "6g", "10g"],
-         "packaging": ["9", "6", "1"]
+         "packaging": ["9", "6", "1"],
+         "sds": "SDS FT-TML Lure.pdf"
        }
      ],
      "target_pests": [
