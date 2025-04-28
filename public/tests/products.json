@@ -2,6 +2,7 @@
    {
      "name": "FT Cuelure",
      "photo": "/liquid/cl/all.jpg",
+     "keys_to_remove" : ["id", "sds", "definition"],
      "formulations": [
        {
         "definition": "FT Cuelure is a liquid attractant for the monitoring and surveying of Fruit Flies. FT Cuelure is guaranteed to be >98% purity by GC and is registered in the United States by the Environmental Protection Agency (EPA) for manufacturers use.",
@@ -36,6 +37,7 @@
    {
      "name": "FT Terpinyl Acetate",
      "photo": "/lures/ta/ta_packaged.jpg",
+     "keys_to_remove" : ["id", "sds", "definition"],
      "formulations": [
        {
          "definition": "Solid TA (Strip/Wafer/Lure) measuring (1”x2”x1/8”,2”x2”x1/8”, 2”x3”x1/8”)  used for the monitoring of fruit flies. FT- TA (Wafer/Lure/) contain (2/4/6) grams of TA with a controlled release rate allowing for long term monitoring. FT- TA (Strip/Wafer/Lure) fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body",
@@ -58,6 +60,7 @@
    {
      "name": "FT Zingerone",
      "photo": null,
+     "keys_to_remove" : ["id", "sds", "definition"],
      "formulations": [
        {
          "definition": "Solid Zingerone Strip measuring 1”x2”x1/8”  used for the monitoring of fruit flies. FT- Zingerone Strips contain 1.5 grams of Zingerone with a controlled release rate allowing for long term monitoring. FT- Zingerone Strips fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body.",
@@ -74,6 +77,7 @@
    {
      "name": "FT Methyl Eugenol",
      "photo": "/liquid/me/all.jpg",
+     "keys_to_remove" : ["id", "sds", "definition"],
      "formulations": [
        {
          "definition": "FT Methyl Eugenol is a liquid attractant for the monitoring and surveying of Fruit Flies. FT Methyl Eugenol is guaranteed to be >98% purity by GC and is registered in the United States by the Environmental Protection Agency (EPA) for manufacturers use.",
@@ -105,6 +109,7 @@
    {
      "name": "FT MR Lure",
      "photo": "/lures/cl/mr_open.jpg",
+     "keys_to_remove" : ["id", "sds", "definition"],
      "formulations": [
        {
          "definition" : "Solid MR Lure measuring 2”x3”x1/8” used for the monitoring of fruit flies. FT- MR Wafer contains 6 grams ME and 2.3 grams Raspberry Ketone with a controlled release rate allowing for long term monitoring. FT- MR Lures fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body.",
@@ -123,6 +128,7 @@
    {
      "name": "FT TMR Lure",
      "photo": "/lures/mix/tmr_packaged.jpg",
+     "keys_to_remove" : ["id", "sds", "definition"],
      "formulations": [
        {
          "definition" : "Solid TMR Lure measuring 2”x3”x1/8” used for the monitoring of fruit flies. FT- TMR Wafer contains 5.5 grams ME, 2.2 grams Raspberry Ketone, and 3.5 grams Trimedlure with a controlled release rate allowing for long term monitoring. FT- TMR Lures fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body.",
@@ -142,6 +148,7 @@
    {
      "name": "FT Trimedlure",
      "photo": "/liquid/tml/all.jpg",
+     "keys_to_remove" : ["id", "sds", "definition"],
      "formulations": [
        {
          "definition": "Liquid attractant used in traps or devices for monitoring and controlling Fruit Flies. FT-Trimedlure is guaranteed >95% purity. FT-Trimedlure Targets the males of ceratitis fruit flies including the Mediterranean Fruit Fly (ceratitis capitata) and the Natal Fruit Fly (ceratitis rosa). The liquid is typically dyed red.",

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ProductTable from './ProductTable';
 import { nanoid } from 'nanoid';
+import { getImageUrl } from '../utils/blobImports';
 import './styles/product.css';
 
 const Product = ({ data }) => {
@@ -19,13 +20,7 @@ const Product = ({ data }) => {
   return (
     <article className="product-container">
       <div className="product-container-header">
-        <img
-          src={
-            data.photo
-              ? `https://farmatechdata.blob.core.windows.net/products/photos${data.photo}`
-              : null
-          }
-        />
+        <img src={data.photo ? getImageUrl(data.photo) : null} />
         <h3 className="product-name" onClick={toggleExpand}>
           {data.name}
         </h3>
@@ -35,7 +30,11 @@ const Product = ({ data }) => {
         <div className="product-container-body">
           <div className="product-formulations">
             {productFormulations.map((formulation) => (
-              <ProductTable key={formulation.id} data={formulation} />
+              <ProductTable
+                key={formulation.id}
+                data={formulation}
+                keysToRemove={data.keys_to_remove}
+              />
             ))}
           </div>
           {data.target_pests && (
