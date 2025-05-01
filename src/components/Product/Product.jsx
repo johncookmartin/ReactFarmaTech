@@ -1,10 +1,15 @@
 import React from 'react';
-import { getImageUrl, getSdsUrl } from '../utils/blobImports';
+import { useContext } from 'react';
+import { getImageUrl, getSdsUrl } from '../../utils/blobImports';
 import './styles/product.css';
-import Carousel from './Carousel/index';
-import ProductTable from './ProductTable';
+import Carousel from '../Carousel/index';
+import { ProductContext } from './ProductGroup';
+import { searchObject } from '../../utils/searchObject';
 
-const Product = ({ product }) => {
+const Product = ({ product, children }) => {
+  const { searchText, targetPests } = useContext(ProductContext);
+  if (!searchObject({ ...product, targetPests }, searchText)) return;
+
   return (
     <section className="product-container">
       <div className="product-container-header">
@@ -27,10 +32,7 @@ const Product = ({ product }) => {
       <div className="product-definition">
         <p>{product.definition}</p>
       </div>
-      <ProductTable
-        formulations={product.formulations}
-        keysToRemove={product.keys_to_remove}
-      />
+      {children}
       <div className="sds-button-container">
         <a
           href={getSdsUrl(product.sds)}

@@ -1,10 +1,7 @@
 import React from 'react';
-import { useEffect, useState, createContext } from 'react';
-import { searchObject } from '../utils/searchObject';
-import ProductGroup from '../components/ProductGroup';
+import { useEffect, useState } from 'react';
+import Product from '../components/Product/index';
 import './styles/products.css';
-
-const ProductsContext = createContext();
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -27,34 +24,42 @@ const Products = () => {
     grabProducts();
   }, []);
 
-  const filteredProducts = products
-    .filter((product) => {
-      return searchObject(product, searchText);
-    })
-    .sort((a, b) => a.group.localeCompare(b.group));
-
   return (
-    <ProductsContext.Provider value={{ searchText: searchText }}>
-      <section className="products-container">
-        <div className="products-search">
-          <input
-            type="text"
-            placeholder="Search..."
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-          />
-        </div>
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((data) => (
-            <ProductGroup key={data.group} data={data} />
-          ))
-        ) : (
-          <p>No products match your search</p>
-        )}
-      </section>
-    </ProductsContext.Provider>
+    <section className="products-container">
+      <div className="products-search">
+        <input
+          type="text"
+          placeholder="Filter Products..."
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </div>
+      {products
+        .sort((a, b) => a.group.localeCompare(b.group))
+        .map((productGroup) => (
+          <Product.Group
+            key={productGroup.group}
+            productGroup={productGroup}
+            searchText={searchText}
+          >
+            <Product.Table formulations={productGroup.target_pests}>
+              <Product.Table.Header>Target Pests</Product.Table.Header>
+            </Product.Table>
+            <Product.Special>
+              {productGroup.special_instructions}
+            </Product.Special>
+            {productGroup.products?.map((product) => (
+              <Product key={product.name} product={product}>
+                <Product.Table
+                  formulations={product.formulations}
+                  keysToRemove={product.keys_to_remove}
+                />
+              </Product>
+            ))}
+          </Product.Group>
+        ))}
+    </section>
   );
 };
 
 export default Products;
-export { ProductsContext };
