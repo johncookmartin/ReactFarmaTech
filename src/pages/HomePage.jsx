@@ -1,17 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Carousel from '../components/Carousel';
-import { carouselArr } from '../assets/carouselArray';
+import Carousel from '../components/Carousel/index.js';
+import { getImageUrl, getFlyUrl } from '../utils/blobImports';
 import StoreBlock from '../components/StoreBlock';
-import threeFliesPhoto from '../assets/flies/Bactrocera_invadens_(06410591)_(6922919407).jfif';
-import productPhoto from '../assets/products/ft_trimedlure_all.jpg';
-import contactPhoto from '../assets/products/DSC00729.jpg';
 import './styles/homepage.css';
 
 const HomePage = () => {
   return (
     <>
-      <Carousel imageArr={carouselArr} />
+      <Carousel
+        className="carousel"
+        imageArr={[
+          getFlyUrl('Cropped_Full_Fly_On_Green_Leaf.jpg'),
+          getFlyUrl('Cropped_Fly_On_Yellow_Lure.jpg'),
+          getFlyUrl('Cropped_Fly_On_Green_Leaf.jpg'),
+        ]}
+      >
+        <Carousel.Button
+          advance={true}
+          className="carousel-button forward-button"
+        />
+        <Carousel.Button
+          advance={false}
+          className="carousel-button back-button"
+        />
+      </Carousel>
       <h1 className="carousel-caption">Welcome to FarmaTech International</h1>
       <section className="store-block-container">
         <StoreBlock productColor="#FF5050" productName="Trimedlure" />
@@ -25,7 +38,7 @@ const HomePage = () => {
         <article className="content-block forest-green">
           <img
             className="company-info-photo"
-            src={threeFliesPhoto}
+            src={getFlyUrl('Bactrocera_invadens_(06410591)_(6922919407).jfif')}
             alt="three bactrocera flies"
           />
           <div className="company-info">
@@ -44,13 +57,19 @@ const HomePage = () => {
             </div>
             <div className="quick-links-container">
               <div className="quick-link">
-                <img className="quick-link-image" src={productPhoto} />
+                <img
+                  className="quick-link-image"
+                  src={getImageUrl('/liquid/tml/all.jpg')}
+                />
                 <Link to="/products" className="quick-link-caption">
                   Products
                 </Link>
               </div>
               <div className="quick-link">
-                <img className="quick-link-image" src={contactPhoto} />
+                <img
+                  className="quick-link-image"
+                  src={getImageUrl('/misc/traps_with_flies/DSC00729.JPG')}
+                />
                 <Link to="/contact" className="quick-link-caption">
                   Contact
                 </Link>

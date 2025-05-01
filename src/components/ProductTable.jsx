@@ -1,21 +1,20 @@
 import React from 'react';
-import { getSdsUrl } from '../utils/blobImports';
+import { useContext } from 'react';
+import { ProductContext } from './Product';
 
-const ProductTable = ({ data, keysToRemove }) => {
-  if (!data) return null;
+const ProductTable = () => {
+  const { formulations, keysToRemove } = useContext(ProductContext);
+  if (!formulations) return null;
 
-  const formulations = Object.entries(data).filter(
+  const data = Object.entries(formulations).filter(
     ([key]) => !keysToRemove.includes(key)
   );
-  const definition = data.definition;
-  const sds = getSdsUrl(data.sds);
 
   return (
     <div className="product-table-container">
-      <h4 className="product-definition">{definition}</h4>
       <table className="product-specs-table">
         <tbody>
-          {formulations.map(([key, value]) => (
+          {data.map(([key, value]) => (
             <tr key={key}>
               <td>
                 <strong>{key.replace('_', ' ')}</strong>
@@ -44,11 +43,6 @@ const ProductTable = ({ data, keysToRemove }) => {
           ))}
         </tbody>
       </table>
-      <div className="sds-button-container">
-        <a href={sds} target="_blank" rel="noopener noreferrer">
-          <button className="sds-butt">Click to view SDS</button>
-        </a>
-      </div>
     </div>
   );
 };

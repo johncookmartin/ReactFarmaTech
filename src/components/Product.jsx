@@ -1,69 +1,55 @@
 import React from 'react';
-import { useState } from 'react';
-import ProductTable from './ProductTable';
-import { nanoid } from 'nanoid';
-import { getImageUrl } from '../utils/blobImports';
+import { createContext } from 'react';
+import { getImageUrl, getSdsUrl } from '../utils/blobImports';
 import './styles/product.css';
+import Carousel from './Carousel/index';
+import ProductTable from './ProductTable';
 
-const Product = ({ data }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const ProductContext = createContext();
 
-  const productFormulations = data.formulations.map((formulation) => ({
-    ...formulation,
-    id: nanoid(),
-  }));
-
-  const toggleExpand = () => {
-    setIsExpanded((prev) => !prev);
-  };
-
+const Product = ({ product }) => {
   return (
-    <article className="product-container">
-      <div className="product-container-header">
-        <img src={data.photo ? getImageUrl(data.photo) : null} />
-        <h3 className="product-name" onClick={toggleExpand}>
-          {data.name}
-        </h3>
-      </div>
-
-      {isExpanded && (
-        <div className="product-container-body">
-          <div className="product-formulations">
-            {productFormulations.map((formulation) => (
-              <ProductTable
-                key={formulation.id}
-                data={formulation}
-                keysToRemove={data.keys_to_remove}
+    <ProductContext.Provider
+      value={{
+        formulations: product.formulations,
+        keysToRemove: product.keys_to_remove,
+      }}
+    >
+      <section className="product-container">
+        <div className="product-container-header">
+          {product.photos.length > 0 && (
+            <Carousel
+              className="product-photo"
+              automate={false}
+              pop={true}
+              imageArr={product.photos.map((photo) => getImageUrl(photo))}
+            >
+              <Carousel.Button className="carousel-button forward-button" />
+              <Carousel.Button
+                advance={false}
+                className="carousel-button back-button"
               />
-            ))}
-          </div>
-          {data.target_pests && (
-            <div className="product-target-pests">
-              <table className="product-specs-table">
-                <thead>
-                  <tr>
-                    <th>Target Pests</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.target_pests.map((pest) => (
-                    <tr key={pest}>
-                      <td>{pest}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            </Carousel>
           )}
-          <div className="product-special-instructions">
-            <p>
-              <b>Special Instructions:</b> {data.special_instructions}
-            </p>
-          </div>
+          <h4 className="product-name">{product.name}</h4>
         </div>
-      )}
-    </article>
+        <div className="product-definition">
+          <p>{product.definition}</p>
+        </div>
+        <ProductTable />
+        <div className="sds-button-container">
+          <a
+            href={getSdsUrl(product.sds)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="sds-butt">Click to view SDS</button>
+          </a>
+        </div>
+      </section>
+    </ProductContext.Provider>
   );
 };
 
 export default Product;
+export { ProductContext };

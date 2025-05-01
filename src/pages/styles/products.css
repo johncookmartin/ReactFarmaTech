@@ -1,28 +1,109 @@
 .products-container {
-   display: flex;
-   flex-direction: column;
-   gap: 2rem;
-   padding: 2rem;
-   background-color: #ffffff;
- }
- 
- .products-search {
-   margin-bottom: 2rem;
-   display: flex;
-   justify-content: center;
- }
- 
- .products-search input {
-   width: 100%;
-   max-width: 500px;
-   padding: 0.75rem;
-   font-size: 1rem;
-   border: 1px solid #ccc;
-   border-radius: 6px;
-   outline: none;
- }
- 
- .products-search input:focus {
-   border-color: #81c784;
-   box-shadow: 0 0 5px rgba(129, 199, 132, 0.5);
- }
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-search {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.products-search input {
+  width: 80%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+/* === Product Group Styling === */
+.product-group-container {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.product-group-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-group-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.product-group-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.product-group-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* === Expanded Products Area === */
+.product-container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+

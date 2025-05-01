@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import Product from '../components/Product';
-import { nanoid } from 'nanoid';
+import ProductGroup from '../components/ProductGroup';
 import './styles/products.css';
 
 const Products = () => {
@@ -16,8 +15,7 @@ const Products = () => {
           throw new Error('Network response was not ok');
         }
         const jsonData = await response.json();
-        const decorated = jsonData.map((item) => ({ ...item, id: nanoid() }));
-        setProducts(decorated);
+        setProducts(jsonData);
       } catch (err) {
         console.log(err.message);
       }
@@ -26,12 +24,14 @@ const Products = () => {
     grabProducts();
   }, []);
 
-  const filteredProducts = products.filter((product) => {
-    if (!searchText.trim()) return true;
+  const filteredProducts = products
+    .filter((product) => {
+      if (!searchText.trim()) return true;
 
-    const fullProductString = JSON.stringify(product).toLowerCase();
-    return fullProductString.includes(searchText.toLowerCase());
-  });
+      const fullProductString = JSON.stringify(product).toLowerCase();
+      return fullProductString.includes(searchText.toLowerCase());
+    })
+    .sort((a, b) => a.group.localeCompare(b.group));
 
   return (
     <section className="products-container">
@@ -44,8 +44,8 @@ const Products = () => {
         />
       </div>
       {filteredProducts.length > 0 ? (
-        filteredProducts.map((productData) => (
-          <Product key={productData.id} data={productData} />
+        filteredProducts.map((data) => (
+          <ProductGroup key={data.group} data={data} />
         ))
       ) : (
         <p>No products match your search</p>
