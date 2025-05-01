@@ -31,11 +31,40 @@ const ProductGroup = ({ data }) => {
         </div>
         {isExpanded && (
           <div>
+            {data.target_pests.length > 0 && (
+              <>
+                <div className="product-table-container">
+                  <table className="product-specs-table">
+                    <thead>
+                      <tr>
+                        <td>
+                          <strong>Target Pests</strong>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data.target_pests.map((pest) => (
+                        <tr key={pest}>
+                          <td>{pest}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="product-definition">
+                  <p>
+                    <strong>Special Instructions: </strong>
+                    {data.special_instructions}
+                  </p>
+                </div>
+              </>
+            )}
             {data.products.map(
               (product) =>
-                searchObject(product, searchText) && (
-                  <Product key={product.name} product={product} />
-                )
+                searchObject(
+                  { ...product, target_pests: data.target_pests },
+                  searchText
+                ) && <Product key={product.name} product={product} />
             )}
           </div>
         )}
