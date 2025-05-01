@@ -233,6 +233,24 @@
               "packaging": ["9", "6", "1"]
           },
           "keys_to_remove": []
+        },
+        {
+          "name": "FT-TMR Lure",
+          "photos": ["/lures/mix/tmr_open.jpg", "/lures/mix/tmr_packaged.jpg"],
+          "definition" : "Solid TMR Lure measuring 2”x3”x1/8” used for the monitoring of fruit flies. FT- TMR Wafer contains 5.5 grams ME, 2.2 grams Raspberry Ketone, and 3.5 grams Trimedlure with a controlled release rate allowing for long term monitoring. FT- TMR Lures fit within the standard Jackson Traps used by the USDA as well as the C&C Trap Body.",
+          "sds": null,
+          "formulations": {
+            "type": "solid",
+            "subtype": "wafer",
+            "sizes": ["2x3x1/8"],
+            "contents": [
+              "5.5g Methyl Eugenol",
+              "2.2g Raspberry Ketone",
+              "3.5g Trimedlure"
+            ],
+            "packaging": ["6"]
+          },
+          "keys_to_remove": []
         }
      ],
      "target_pests": [

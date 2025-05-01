@@ -32,7 +32,7 @@ const Carousel = ({
     if (automate) {
       setInterval(() => {
         advanceImage();
-      }, 5000);
+      }, 10000);
     }
   }, []);
 

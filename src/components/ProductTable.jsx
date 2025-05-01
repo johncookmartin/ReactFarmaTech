@@ -1,9 +1,6 @@
 import React from 'react';
-import { useContext } from 'react';
-import { ProductContext } from './Product';
 
-const ProductTable = () => {
-  const { formulations, keysToRemove } = useContext(ProductContext);
+const ProductTable = ({ formulations, keysToRemove }) => {
   if (!formulations) return null;
 
   const data = Object.entries(formulations).filter(

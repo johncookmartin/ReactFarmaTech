@@ -1,7 +1,10 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, createContext } from 'react';
+import { searchObject } from '../utils/searchObject';
 import ProductGroup from '../components/ProductGroup';
 import './styles/products.css';
+
+const ProductsContext = createContext();
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -26,32 +29,32 @@ const Products = () => {
 
   const filteredProducts = products
     .filter((product) => {
-      if (!searchText.trim()) return true;
-
-      const fullProductString = JSON.stringify(product).toLowerCase();
-      return fullProductString.includes(searchText.toLowerCase());
+      return searchObject(product, searchText);
     })
     .sort((a, b) => a.group.localeCompare(b.group));
 
   return (
-    <section className="products-container">
-      <div className="products-search">
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-      </div>
-      {filteredProducts.length > 0 ? (
-        filteredProducts.map((data) => (
-          <ProductGroup key={data.group} data={data} />
-        ))
-      ) : (
-        <p>No products match your search</p>
-      )}
-    </section>
+    <ProductsContext.Provider value={{ searchText: searchText }}>
+      <section className="products-container">
+        <div className="products-search">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+        </div>
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((data) => (
+            <ProductGroup key={data.group} data={data} />
+          ))
+        ) : (
+          <p>No products match your search</p>
+        )}
+      </section>
+    </ProductsContext.Provider>
   );
 };
 
 export default Products;
+export { ProductsContext };

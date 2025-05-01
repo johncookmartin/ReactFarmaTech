@@ -15,16 +15,7 @@ const HomePage = () => {
           getFlyUrl('Cropped_Fly_On_Yellow_Lure.jpg'),
           getFlyUrl('Cropped_Fly_On_Green_Leaf.jpg'),
         ]}
-      >
-        <Carousel.Button
-          advance={true}
-          className="carousel-button forward-button"
-        />
-        <Carousel.Button
-          advance={false}
-          className="carousel-button back-button"
-        />
-      </Carousel>
+      />
       <h1 className="carousel-caption">Welcome to FarmaTech International</h1>
       <section className="store-block-container">
         <StoreBlock productColor="#FF5050" productName="Trimedlure" />
