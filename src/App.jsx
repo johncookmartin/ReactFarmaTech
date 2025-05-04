@@ -19,7 +19,7 @@ const App = () => {
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="contact" element={<ContactUs />} />
-        <Route path="products" element={<Products />} />
+        <Route path="products/:searchText?" element={<Products />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )

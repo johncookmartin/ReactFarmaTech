@@ -2,10 +2,15 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Product from '../components/Product/index';
 import './styles/products.css';
+import { useLocation } from 'react-router-dom';
 
 const Products = () => {
+  const { search } = useLocation();
+  const query = new URLSearchParams(search);
+  const initialSearchText = query.get('searchText') || '';
+
   const [products, setProducts] = useState([]);
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState(initialSearchText);
 
   useEffect(() => {
     const grabProducts = async () => {
