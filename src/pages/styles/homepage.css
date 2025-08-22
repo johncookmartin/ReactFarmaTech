@@ -141,3 +141,50 @@ section.carousel img {
   object-fit: cover;
   object-position: bottom;
 }
+
+@media (max-width: 600px) {
+  h1.carousel-caption {
+    font-size: 1.5em;
+    margin-top: -40px;
+    left: 8px;
+  }
+  section.store-block-container {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  section.content-container {
+    min-width: 100vw;
+    padding: 0 0.5rem;
+  }
+  .content-block {
+    flex-direction: column;
+    padding-inline: 2%;
+    font-size: 0.95em;
+  }
+  img.company-info-photo {
+    width: 98vw;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .content-block h2 {
+    font-size: 1.2em;
+  }
+  .company-info-link {
+    font-size: 1em;
+    margin-left: 0;
+  }
+  .quick-links-container {
+    flex-direction: column;
+  }
+  .quick-link {
+    width: 98vw;
+    margin: 10px 0;
+  }
+  .quick-link-caption {
+    font-size: 1rem;
+  }
+  section.carousel {
+    height: 220px;
+  }
+}

@@ -40,3 +40,21 @@
   color: #333;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .modal-content {
+    max-width: 98vw;
+    max-height: 80vh;
+    border-radius: 6px;
+    padding: 0.5rem;
+  }
+  .modal-content img {
+    max-width: 98vw;
+    max-height: 60vh;
+  }
+  .modal-close {
+    font-size: 1.5rem;
+    top: 4px;
+    right: 8px;
+  }
+}

@@ -40,6 +40,35 @@
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .products-container {
+    padding: 0.5rem;
+  }
+  .products-search input {
+    width: 98vw;
+    max-width: 98vw;
+    font-size: 0.95rem;
+    padding: 0.3rem;
+  }
+  .product-group-container {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .product-group-header {
+    gap: 0.5rem;
+  }
+  .product-group-image {
+    width: 60px;
+  }
+  .product-group-name {
+    font-size: 1rem;
+  }
+  .product-container {
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
+
 .product-group-image {
   width: 100px;
   height: auto;

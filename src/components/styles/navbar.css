@@ -1,3 +1,35 @@
+/* Mobile nav menu improvements */
+@media (max-width: 600px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #8A946F;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    padding: 1rem 0;
+    z-index: 10;
+    display: none; /* Hidden by default, shown when toggled */
+  }
+  .nav-menu.mobile-active {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 15px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    z-index: 20;
+    cursor: pointer;
+  }
+}
+
 header img {
    height: 80px;
    margin: 10px;
@@ -59,3 +91,26 @@ header img {
  .nav-link:hover::after {
    width: 100%;
  }
+
+@media (max-width: 600px) {
+  header {
+    height: 60px;
+    flex-direction: column;
+    padding: 0 0.5rem;
+  }
+  header img {
+    height: 50px;
+    margin: 5px;
+  }
+  .navbar {
+    margin-right: 0.5rem;
+  }
+  .nav-menu {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+  .nav-link {
+    font-size: 0.95rem;
+    padding: 0.3rem;
+  }
+}

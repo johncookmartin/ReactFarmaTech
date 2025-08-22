@@ -109,3 +109,44 @@
  .back-button {
    left: 10px;
  }
+
+@media (max-width: 600px) {
+  .product-container {
+    padding: 0.5rem;
+    font-size: 0.95em;
+  }
+  .product-container-header {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .product-name {
+    font-size: 1rem;
+  }
+  .product-definition {
+    font-size: 0.85rem;
+  }
+  .product-table-container {
+    margin-top: 0.5rem;
+  }
+  .product-specs-table {
+    font-size: 0.8rem;
+  }
+  .sds-button-container {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+  .sds-butt {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .product-photo {
+    width: 98vw;
+    height: 180px;
+  }
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+  }
+}

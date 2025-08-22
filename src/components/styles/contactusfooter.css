@@ -32,3 +32,29 @@
    border: 0;
    border-radius: 6px;
  }
+
+@media (max-width: 600px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 0.5rem;
+    align-items: stretch;
+  }
+  .map-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .contact-info {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .contact-info h3 {
+    font-size: 1.1rem;
+  }
+  .contact-footer {
+    padding: 1rem 0.5rem;
+  }
+  .map-container iframe {
+    height: 180px;
+  }
+}

@@ -31,3 +31,19 @@
    color: white;
    border-radius: 4px;
  }
+
+@media (max-width: 600px) {
+  .about-container {
+    padding-block: 1rem;
+  }
+  .about-block {
+    padding: 1rem 2%;
+    margin-bottom: 1rem;
+  }
+  .about-block h2 {
+    font-size: 1.5em;
+  }
+  .about-block p {
+    font-size: 1em;
+  }
+}

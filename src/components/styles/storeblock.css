@@ -49,3 +49,22 @@ article.store-block {
  .store-block-butt:hover {
   background-color: #d4d4d4;
  }
+
+@media (max-width: 600px) {
+  article.store-block {
+    width: 98vw;
+    height: 140px;
+    margin-inline: 0;
+    font-size: 0.95em;
+  }
+  article.store-block h3 {
+    font-size: 1.2em;
+  }
+  .store-block-butt {
+    font-size: 1em;
+    height: 35%;
+  }
+  div.store-block-color {
+    height: 20px;
+  }
+}
