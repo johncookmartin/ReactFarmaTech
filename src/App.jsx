@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Products from './pages/Products';
+import MobileProvider from './context/MobileContext';
 
 const App = () => {
   const router = createBrowserRouter(
@@ -25,7 +26,11 @@ const App = () => {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <MobileProvider>
+      <RouterProvider router={router} />
+    </MobileProvider>
+  );
 };
 
 export default App;

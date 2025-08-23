@@ -1,11 +1,16 @@
 import React from 'react';
 import logo from '../assets/logos/FarmaTechGreyLogo.png';
 import './styles/storeblock.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useMobile } from '../context/MobileContext';
 
 const StoreBlock = ({ productColor, productName }) => {
-  const navigate = useNavigate();
   const styles = { backgroundColor: productColor };
+  const isMobile = useMobile();
+
+  const buttonText = isMobile
+    ? `Browse ${productName}`
+    : `Browse ${productName} products`;
 
   return (
     <article className="store-block">
@@ -13,9 +18,7 @@ const StoreBlock = ({ productColor, productName }) => {
       <div style={styles} className="store-block-color"></div>
       <h3>{productName}</h3>
       <Link to={`/products?searchText=${productName}`}>
-        <button className="store-block-butt">
-          Browse {productName} products
-        </button>
+        <button className="store-block-butt">{buttonText}</button>
       </Link>
     </article>
   );

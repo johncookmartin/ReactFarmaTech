@@ -45,8 +45,7 @@
     padding: 0.5rem;
   }
   .products-search input {
-    width: 98vw;
-    max-width: 98vw;
+    width: 80%;
     font-size: 0.95rem;
     padding: 0.3rem;
   }

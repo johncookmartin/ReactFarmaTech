@@ -52,19 +52,16 @@ article.store-block {
 
 @media (max-width: 600px) {
   article.store-block {
-    width: 98vw;
-    height: 140px;
-    margin-inline: 0;
-    font-size: 0.95em;
-  }
-  article.store-block h3 {
-    font-size: 1.2em;
-  }
-  .store-block-butt {
-    font-size: 1em;
-    height: 35%;
-  }
-  div.store-block-color {
-    height: 20px;
-  }
+   margin: 5px;
+   top: 0px;
+ } 
+ article.store-block h3 {
+   position: absolute;
+   top: 5px;
+   width: 100%;
+ }
+ 
+ .store-block-butt {
+   height: 30%;
+ }
 }

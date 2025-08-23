@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import farmaTechLogo from '../assets/logos/cropped-cropped-Logo-See-Thru-1.png';
 import './styles/navbar.css';
+import { useMobile } from '../context/MobileContext';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
-  React.useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 600);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const isMobile = useMobile();
+
+  const handleNavLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header>
@@ -20,7 +19,9 @@ const Navbar = () => {
       </Link>
       {isMobile && (
         <button
-          className="navbar-toggle"
+          className={`navbar-toggle${
+            isMobile && mobileMenuOpen ? ' mobile-active' : ''
+          }`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle navigation"
         >
@@ -34,22 +35,30 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <Link to="/" className="nav-link">
+            <Link to="/" className="nav-link" onClick={handleNavLinkClick}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="nav-link">
+            <Link to="/about" className="nav-link" onClick={handleNavLinkClick}>
               About Us
             </Link>
           </li>
           <li>
-            <Link to="/products" className="nav-link">
+            <Link
+              to="/products"
+              className="nav-link"
+              onClick={handleNavLinkClick}
+            >
               Products
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="nav-link">
+            <Link
+              to="/contact"
+              className="nav-link"
+              onClick={handleNavLinkClick}
+            >
               Contact
             </Link>
           </li>

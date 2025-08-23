@@ -141,7 +141,7 @@
     padding: 0.3rem 0.7rem;
   }
   .product-photo {
-    width: 98vw;
+    width: 100%;
     height: 180px;
   }
   .carousel-button {
