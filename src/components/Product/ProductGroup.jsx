@@ -1,13 +1,10 @@
-import React, { createContext, useEffect } from 'react';
-import { useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { searchObject } from '../../utils/searchObject';
 import { getImageUrl } from '../../utils/blobImports';
 
 const ProductContext = createContext();
 
 const ProductGroup = ({ productGroup, searchText = '', children }) => {
-  if (!searchObject(productGroup, searchText)) return;
-
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -16,7 +13,9 @@ const ProductGroup = ({ productGroup, searchText = '', children }) => {
 
   useEffect(() => {
     setIsExpanded(searchObject(productGroup, searchText) && searchText.trim());
-  }, [searchText]);
+  }, [productGroup, searchText]);
+
+  if (!searchObject(productGroup, searchText)) return null;
 
   return (
     <ProductContext.Provider
