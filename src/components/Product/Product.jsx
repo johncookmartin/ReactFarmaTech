@@ -1,10 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
-import { getImageUrl, getSdsUrl } from '../../utils/blobImports';
 import './styles/product.css';
 import Carousel from '../Carousel/index';
 import { ProductContext } from './ProductGroup';
 import { searchObject } from '../../utils/searchObject';
+import { BlobPath } from '../../utils/enums';
 
 const Product = ({ product, children }) => {
   const { searchText, targetPests } = useContext(ProductContext);
@@ -18,7 +18,9 @@ const Product = ({ product, children }) => {
             className="product-photo"
             automate={false}
             pop={true}
-            imageArr={product.photos.map((photo) => getImageUrl(photo))}
+            imageArr={product.photos.map((photo) => {
+              return photo?.fileUrl;
+            })}
           >
             <Carousel.Button className="carousel-button forward-button" />
             <Carousel.Button
@@ -33,15 +35,17 @@ const Product = ({ product, children }) => {
         <p>{product.definition}</p>
       </div>
       {children}
-      <div className="sds-button-container">
-        <a
-          href={getSdsUrl(product.sds)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="sds-butt">Click to view SDS</button>
-        </a>
-      </div>
+      {product.sds && (
+        <div className="sds-button-container">
+          <a
+            href={product.sds?.fileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="sds-butt">Click to view SDS</button>
+          </a>
+        </div>
+      )}
     </section>
   );
 };

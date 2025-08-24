@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { searchObject } from '../../utils/searchObject';
-import { getImageUrl } from '../../utils/blobImports';
 
 const ProductContext = createContext();
 
@@ -25,7 +24,7 @@ const ProductGroup = ({ productGroup, searchText = '', children }) => {
         <div className="product-group-header" onClick={toggleExpand}>
           <img
             className="product-group-image"
-            src={getImageUrl(productGroup.group_photo)}
+            src={productGroup.groupPhoto?.fileUrl}
             alt={productGroup.group}
           />
           <h3 className="product-group-name">{productGroup.group}</h3>

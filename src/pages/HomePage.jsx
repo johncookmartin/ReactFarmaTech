@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Carousel from '../components/Carousel/index.js';
-import { getImageUrl, getFlyUrl } from '../utils/blobImports';
 import StoreBlock from '../components/StoreBlock';
 import './styles/homepage.css';
+import { BlobPath } from '../utils/enums.js';
 
 const HomePage = () => {
   return (
@@ -11,9 +11,9 @@ const HomePage = () => {
       <Carousel
         className="carousel"
         imageArr={[
-          getFlyUrl('Cropped_Full_Fly_On_Green_Leaf.jpg'),
-          getFlyUrl('Cropped_Fly_On_Yellow_Lure.jpg'),
-          getFlyUrl('Cropped_Fly_On_Green_Leaf.jpg'),
+          BlobPath.FLIES + 'Cropped_Full_Fly_On_Green_Leaf.jpg',
+          BlobPath.FLIES + 'Cropped_Fly_On_Yellow_Lure.jpg',
+          BlobPath.FLIES + 'Cropped_Fly_On_Green_Leaf.jpg',
         ]}
       />
       <h1 className="carousel-caption">Welcome to FarmaTech International</h1>
@@ -29,7 +29,10 @@ const HomePage = () => {
         <article className="content-block forest-green">
           <img
             className="company-info-photo"
-            src={getFlyUrl('Bactrocera_invadens_(06410591)_(6922919407).jfif')}
+            src={
+              BlobPath.FLIES +
+              'Bactrocera_invadens_(06410591)_(6922919407).jfif'
+            }
             alt="three bactrocera flies"
           />
           <div className="company-info">
@@ -50,7 +53,7 @@ const HomePage = () => {
               <div className="quick-link">
                 <img
                   className="quick-link-image"
-                  src={getImageUrl('/liquid/tml/all.jpg')}
+                  src={BlobPath.PRODUCTS + '/liquid/tml/all.jpg'}
                 />
                 <Link to="/products" className="quick-link-caption">
                   Products
@@ -59,7 +62,9 @@ const HomePage = () => {
               <div className="quick-link">
                 <img
                   className="quick-link-image"
-                  src={getImageUrl('/misc/traps_with_flies/DSC00729.JPG')}
+                  src={
+                    BlobPath.PRODUCTS + '/misc/traps_with_flies/DSC00729.JPG'
+                  }
                 />
                 <Link to="/contact" className="quick-link-caption">
                   Contact

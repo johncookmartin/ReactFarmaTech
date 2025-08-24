@@ -47,17 +47,17 @@ const Products = () => {
             productGroup={productGroup}
             searchText={searchText}
           >
-            <Product.Table formulations={productGroup.target_pests}>
+            <Product.TargetPests targetPests={productGroup.targetPests}>
               <Product.Table.Header>Target Pests</Product.Table.Header>
-            </Product.Table>
+            </Product.TargetPests>
             <Product.Special>
-              {productGroup.special_instructions}
+              {productGroup.specialInstructions}
             </Product.Special>
             {productGroup.products?.map((product) => (
               <Product key={product.name} product={product}>
                 <Product.Table
                   formulations={product.formulations}
-                  keysToRemove={product.keys_to_remove}
+                  keysToRemove={product.keysToRemove}
                 />
               </Product>
             ))}

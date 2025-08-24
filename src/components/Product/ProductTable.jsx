@@ -1,14 +1,11 @@
 import React from 'react';
+import { FormulationValueType } from '../../utils/enums';
 
-const ProductTable = ({ formulations, keysToRemove = [], children }) => {
+const ProductTable = ({ formulations, keysToRemove = [] }) => {
   if (!formulations) return null;
 
-  const normalized = Array.isArray(formulations)
-    ? Object.fromEntries(formulations.map((item, index) => [index, item]))
-    : formulations;
-
-  const data = Object.entries(normalized).filter(
-    ([key]) => !keysToRemove.includes(key)
+  const filteredFormulations = formulations.filter(
+    (formulation) => !keysToRemove.includes(formulation.key)
   );
 
   const displayKey = (key) => {
@@ -20,26 +17,28 @@ const ProductTable = ({ formulations, keysToRemove = [], children }) => {
       );
     }
   };
+  const displayValue = (formulation) => {
+    if (formulation.valueType === FormulationValueType.STRING) {
+      return formulation.stringValue;
+    } else if (formulation.valueType === FormulationValueType.ARRAY) {
+      return formulation.arrayValues.join(', ');
+    } else {
+      return <ProductTable formulations={formulation.objectValues} />;
+    }
+  };
 
   return (
-    <div className="product=table-container">
+    <div className="product-table-container">
       <table className="product-specs-table">
-        {children}
         <tbody>
-          {data.map(([key, value]) => (
-            <tr key={key}>
-              {displayKey(key)}
-              <td>
-                {Array.isArray(value) ? (
-                  value.join(', ')
-                ) : typeof value === 'object' && value !== null ? (
-                  <ProductTable formulations={value} />
-                ) : (
-                  value
-                )}
-              </td>
-            </tr>
-          ))}
+          {filteredFormulations.map((formulation) => {
+            return (
+              <tr key={formulation.id}>
+                {displayKey(formulation.key)}
+                <td>{displayValue(formulation)}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
